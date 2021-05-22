@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+/* colors */
+/* dark-red: #7c0000 */
+/* light-red: #ba0001 */
+body {
+  background-color: #ffffff;
+}
+
+.show-border {
+  border: 0px solid black;
+}
+
+.business {
+  font-family: 'Happy Monkey';
+}
+
+
+.card-xl {
+  margin-top: 1rem;
+  max-width: 650px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-m {
+  max-width: 382px;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+.card-sm {
+  max-width: 320px;
+  max-height: 308px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.70);
+  box-shadow: 0px 2px 18px 0px rgba(8, 8, 8, 0.3);
+  backdrop-filter: blur(0.0px);
+  border-radius: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btn {
+  background-color: black;
+}
+
+#arrowUp {
+  fill: #7c0000;
+}
+
+.in-between {
+  background-color: #e3e2df;
+  height: 3rem;
+  box-shadow: 0px 2px 18px 0px rgba(8, 8, 8, 0.3) inset;
+}
+
+.sb-img {
+  margin-bottom: 1rem;
+}
+
+.sb-btn {
+  padding: .5rem;
+  background-color: #ba0001;
+  color: #ffffff;
+  border-radius: 2.5px;
+}
+
+.pad-top-5 {
+  padding-top: 5px;
+}
+.pad-btm-5 {
+  padding-bottom: 5px;
+}
