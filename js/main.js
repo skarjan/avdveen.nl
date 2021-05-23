@@ -29,7 +29,6 @@ document.getElementsByClassName("content")[0].addEventListener("click", hideMenu
 
 
 function deactivateLanguageLink(links, borders, i) {
-  console.log(i);
   
   elLink = document.getElementsByClassName("active-lang");
   elBorder = document.getElementsByClassName("active-lang-border");
