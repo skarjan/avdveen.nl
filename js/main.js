@@ -23,10 +23,12 @@ function docReady(fn) {
 
 }
 
-
-document.getElementById("menu-hb").addEventListener("click", toggleMenu);
-document.getElementsByClassName("content")[0].addEventListener("click", hideMenu);
-
+function addMenuEventListeners(){
+  document.getElementById("menu-hb").addEventListener("click", toggleMenu);
+  document.getElementsByClassName("content")[0].addEventListener("click", hideMenu);
+  addMenuClickListeners();
+}
+  
 
 function deactivateLanguageLink(links, borders, i) {
   
