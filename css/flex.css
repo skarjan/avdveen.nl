@@ -1,0 +1,78 @@
+.container-90 {
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.container-100 {
+    width: 100%;
+}
+.nav-spaced-out {
+    display:flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.show-flex{
+    display:flex;
+}
+.fl-sp-btwn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-items-centered {
+    display:flex;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.flex-items-space-around {
+    /* try 1080px if it goes funky... */
+    max-width: 1096px; 
+    display:flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex-items-space-between {
+    /* try 1080px if it goes funky... */
+    max-width: 1096px; 
+    display:flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex-child {
+    padding:1rem;
+}
+
+.flx-img-txt {
+    display:flex;
+    align-items: center;
+}
+.flx-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flx-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flx-left-mrg {
+    max-width: 1096px; 
+    display:flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
