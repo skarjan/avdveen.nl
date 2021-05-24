@@ -124,8 +124,9 @@ function addLanguageClickListeners() {
 
 function toggleMenu() {
 
+  // show/hide on hb menu icon click
   let linkContainer = document.getElementById("linkContainer");
-  if (linkContainer.classList[0] !== 'responsive-links' && this.classList[0] !== "content") {
+  if (linkContainer.classList[0] !== 'responsive-links' && this.classList[0] == "menu-hb") {
 
     // show
     linkContainer.classList.add('responsive-links');
@@ -134,52 +135,38 @@ function toggleMenu() {
 
     // animate
     setTimeout(function () {
-        document.getElementsByClassName("responsive-links")[0].style.top = "106px";
-        document.getElementsByClassName("responsive-links")[0].style.opacity = "100";}, 1);
-      // document.getElementsByClassName("responsive-links")[0].style.top = "0";
+      document.getElementsByClassName("responsive-links")[0].style.top = "106px";
+      document.getElementsByClassName("responsive-links")[0].style.opacity = "100";
+    }, 1);
 
+  } else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] === "menu-hb") {
 
-    }
-    else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] == "content") {
-      // animate
-      document.getElementsByClassName("responsive-links")[0].style.top = "0";
-      document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
-      // hide
-      setTimeout(function(){
-        linkContainer.classList.remove('responsive-links');
-        linkContainer.classList.remove('show');
-        linkContainer.classList.add('hide');
-      }, 400);
+    // animate
+    document.getElementsByClassName("responsive-links")[0].style.top = "0";
+    document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
 
-    }
+    // hide
+    setTimeout(function () {
+      linkContainer.classList.remove('responsive-links');
+      linkContainer.classList.remove('show');
+      linkContainer.classList.add('hide');
+    }, 400);
+  }
 
-    else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0]=== "menu-hb") {
-            // animate
-            document.getElementsByClassName("responsive-links")[0].style.top = "0";
-            document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
-            // hide
-            setTimeout(function(){
-              linkContainer.classList.remove('responsive-links');
-              linkContainer.classList.remove('show');
-              linkContainer.classList.add('hide');
-            }, 400);
-    }
+  // hide menu if user clicks on the body
+  if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] == "content") {
+
+    // animate
+    document.getElementsByClassName("responsive-links")[0].style.top = "0";
+    document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+
+    // hide
+    setTimeout(function () {
+      linkContainer.classList.remove('responsive-links');
+      linkContainer.classList.remove('show');
+      linkContainer.classList.add('hide');
+    }, 400);
 
   }
 
-
-  // IF NOTHING BREAKS DELETE THIS!!
-  // function hideMenu() {
-  //   let linkContainer = document.getElementById("linkContainer");
-  //   if (linkContainer.classList[1] == "show") {
-  //     //animate
-  //     document.getElementsByClassName("responsive-links")[0].style.top = "0";
-  //     document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
-  //     //hide
-  //     setTimeout(function(){
-  //       linkContainer.classList.remove('responsive-links');
-  //       linkContainer.classList.remove('show');
-  //       linkContainer.classList.add('hide');
-  //     }, 400);
-  //   }
-  // }
+}
