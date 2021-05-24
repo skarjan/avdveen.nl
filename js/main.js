@@ -21,16 +21,6 @@ function docReady(fn) {
 
 }
 
-function addMenuEventListeners() {
-
-  // event listeners to show/hide the menu on small screens
-  document.getElementById("menu-hb").addEventListener("click", toggleMenu);
-  document.getElementsByClassName("content")[0].addEventListener("click", toggleMenu);
-
-  // event listeners to display active/inactive links
-  addMenuClickListeners();
-}
-
 
 function deactivateLanguageLink(links, borders, i) {
 
@@ -86,6 +76,17 @@ function isLinkExternal(anchor) {
 }
 
 
+function addMenuEventListeners() {
+
+  // event listeners to show/hide the menu on small screens
+  document.getElementById("menu-hb").addEventListener("click", toggleMenu);
+  document.getElementsByClassName("content")[0].addEventListener("click", toggleMenu);
+
+  // event listeners to display active/inactive links
+  addMenuClickListeners();
+}
+
+
 function addMenuClickListeners() {
 
   let links = document.getElementsByClassName("anchor");
@@ -136,14 +137,14 @@ function toggleMenu() {
     // animate
     setTimeout(function () {
       document.getElementsByClassName("responsive-links")[0].style.top = "106px";
-      document.getElementsByClassName("responsive-links")[0].style.opacity = "100";
+      // document.getElementsByClassName("responsive-links")[0].style.opacity = "100";
     }, 1);
 
   } else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] === "menu-hb") {
 
     // animate
     document.getElementsByClassName("responsive-links")[0].style.top = "0";
-    document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+    // document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
 
     // hide
     setTimeout(function () {
