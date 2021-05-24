@@ -171,3 +171,14 @@ function toggleMenu() {
   }
 
 }
+// play around with this for the opacity?
+function is1080Wide(mediaQuery) {
+  trace(mediaQuery);  
+return mediaQuery.matches;
+}
+
+var x = window.matchMedia("(min-width: 1080px)")
+
+x.addEventListener("change", is1080Wide); // Attach listener function on state changes
+
+is1080Wide(x); // Call listener function at run time
