@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bungee&display=swap');
 
+/* colors */
+/* primary: #990000 */
+
 body {
   background-color: #ffffff;
 }
@@ -304,7 +307,7 @@ h2 {
     display: block;
   }
 
-  .lang-container {
+  .sm-menu-container {
     display: flex;
     align-items: center;
   }
@@ -382,7 +385,7 @@ h2 {
   }
 
 }
-.lang-container {
+.sm-menu-container {
   display: flex;
   align-items: center;
 }
