@@ -6,8 +6,6 @@ function trace(msg) {
   };
 }
 
-// check if/when live reload was done
-
 
 function docReady(fn) {
 
@@ -23,15 +21,19 @@ function docReady(fn) {
 
 }
 
-function addMenuEventListeners(){
+function addMenuEventListeners() {
+
+  // event listeners to show/hide the menu on small screens
   document.getElementById("menu-hb").addEventListener("click", toggleMenu);
-  document.getElementsByClassName("content")[0].addEventListener("click", hideMenu);
+  document.getElementsByClassName("content")[0].addEventListener("click", toggleMenu);
+
+  // event listeners to display active/inactive links
   addMenuClickListeners();
 }
-  
+
 
 function deactivateLanguageLink(links, borders, i) {
-  
+
   elLink = document.getElementsByClassName("active-lang");
   elBorder = document.getElementsByClassName("active-lang-border");
 
@@ -69,7 +71,7 @@ function activateLink(links, borders, i) {
 
 }
 
-function activateLanguageLink(links, borders, i){
+function activateLanguageLink(links, borders, i) {
 
   links[i].classList.add("active-lang");
   links[i].classList.remove("lang-link");
@@ -123,24 +125,61 @@ function addLanguageClickListeners() {
 function toggleMenu() {
 
   let linkContainer = document.getElementById("linkContainer");
+  if (linkContainer.classList[0] !== 'responsive-links' && this.classList[0] !== "content") {
 
-  if (linkContainer.classList[0] !== 'responsive-links') {
+    // show
     linkContainer.classList.add('responsive-links');
     linkContainer.classList.add('show');
     linkContainer.classList.remove('hide');
-  } else {
-    linkContainer.classList.remove('responsive-links');
-    linkContainer.classList.remove('show');
-    linkContainer.classList.add('hide');
+
+    // animate
+    setTimeout(function () {
+        document.getElementsByClassName("responsive-links")[0].style.top = "106px";
+        document.getElementsByClassName("responsive-links")[0].style.opacity = "100";}, 1);
+      // document.getElementsByClassName("responsive-links")[0].style.top = "0";
+
+
+    }
+    else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] == "content") {
+      // animate
+      document.getElementsByClassName("responsive-links")[0].style.top = "0";
+      document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+      // hide
+      setTimeout(function(){
+        linkContainer.classList.remove('responsive-links');
+        linkContainer.classList.remove('show');
+        linkContainer.classList.add('hide');
+      }, 400);
+
+    }
+
+    else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0]=== "menu-hb") {
+            // animate
+            document.getElementsByClassName("responsive-links")[0].style.top = "0";
+            document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+            // hide
+            setTimeout(function(){
+              linkContainer.classList.remove('responsive-links');
+              linkContainer.classList.remove('show');
+              linkContainer.classList.add('hide');
+            }, 400);
+    }
+
   }
 
-}
 
-function hideMenu() {
-  let linkContainer = document.getElementById("linkContainer");
-  if (linkContainer.classList[1] == "show") {
-    linkContainer.classList.remove('responsive-links');
-    linkContainer.classList.remove('show');
-    linkContainer.classList.add('hide');
-  }
-}
+  // IF NOTHING BREAKS DELETE THIS!!
+  // function hideMenu() {
+  //   let linkContainer = document.getElementById("linkContainer");
+  //   if (linkContainer.classList[1] == "show") {
+  //     //animate
+  //     document.getElementsByClassName("responsive-links")[0].style.top = "0";
+  //     document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+  //     //hide
+  //     setTimeout(function(){
+  //       linkContainer.classList.remove('responsive-links');
+  //       linkContainer.classList.remove('show');
+  //       linkContainer.classList.add('hide');
+  //     }, 400);
+  //   }
+  // }
