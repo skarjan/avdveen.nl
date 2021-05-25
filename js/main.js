@@ -135,16 +135,20 @@ function toggleMenu() {
     linkContainer.classList.remove('hide');
 
     // animate
+    // begin state
+    document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+
+    // end state
     setTimeout(function () {
       document.getElementsByClassName("responsive-links")[0].style.top = "106px";
-      // document.getElementsByClassName("responsive-links")[0].style.opacity = "100";
+      document.getElementsByClassName("responsive-links")[0].style.opacity = "100";
     }, 1);
 
   } else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] === "menu-hb") {
 
     // animate
-    document.getElementsByClassName("responsive-links")[0].style.top = "0";
-    // document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+    document.getElementsByClassName("responsive-links")[0].style.top = "75px";
+    document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
 
     // hide
     setTimeout(function () {
@@ -158,8 +162,10 @@ function toggleMenu() {
   if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] == "content") {
 
     // animate
-    document.getElementsByClassName("responsive-links")[0].style.top = "0";
     document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
+
+    document.getElementsByClassName("responsive-links")[0].style.top = "75px";
+    // document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
 
     // hide
     setTimeout(function () {
@@ -171,14 +177,16 @@ function toggleMenu() {
   }
 
 }
-// play around with this for the opacity?
+// Work around for opacity issues
 function is1080Wide(mediaQuery) {
-  trace(mediaQuery);  
-return mediaQuery.matches;
+  if (mediaQuery.matches) {
+    document.getElementById("linkContainer").style.opacity = 1;
+  }
+  trace(document.getElementById("linkContainer").style.opacity);
 }
 
-var x = window.matchMedia("(min-width: 1080px)")
+var mQ = window.matchMedia("(min-width: 1080px)")
 
-x.addEventListener("change", is1080Wide); // Attach listener function on state changes
+mQ.addEventListener("change", is1080Wide); // Attach listener function on state changes
 
-is1080Wide(x); // Call listener function at run time
+

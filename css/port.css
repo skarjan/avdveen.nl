@@ -297,7 +297,7 @@ h2 {
     box-shadow: 0px 8px 18px 0px rgb(0 0 0 / 30%);
     max-width: 748px;
     width: 100%;
-    top: 0;
+    top: 75px;
     left: 0px;
     background-color: #fff;
     position: absolute;
@@ -379,12 +379,13 @@ h2 {
     max-width: 1060px;
     min-width: 768px;
     width: 100%;
-    top: 0;
+    top: 75px;
     left: 0;
     background-color: #fff;
     position: absolute;
     padding: 8px 0;
-    transition: top, .5s;
+    transition: top, .5s, opacity, .4s;
+    opacity: 0;
     z-index: 1;
   }
 
