@@ -182,8 +182,9 @@ function is1080Wide(mediaQuery) {
   if (mediaQuery.matches) {
     document.getElementById("linkContainer").style.opacity = 1;
   }
-  trace(document.getElementById("linkContainer").style.opacity);
+ 
 }
+
 
 var mQ = window.matchMedia("(min-width: 1080px)")
 
