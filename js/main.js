@@ -177,17 +177,31 @@ function toggleMenu() {
   }
 
 }
-// Work around for opacity issues
-function is1080Wide(mediaQuery) {
-  if (mediaQuery.matches) {
-    document.getElementById("linkContainer").style.opacity = 1;
-  }
- 
+
+// Work around for opacity issue
+function is1080Wide() {
+
+  var mQ = window.matchMedia("(min-width: 1080px)")
+
+  mQ.addEventListener("change", setOpacityOnLinks);
 }
 
+function setOpacityOnLinks(mediaQuery) {
 
-var mQ = window.matchMedia("(min-width: 1080px)")
+  if (mediaQuery.matches) {
 
-mQ.addEventListener("change", is1080Wide); // Attach listener function on state changes
+    document.getElementById("linkContainer").style.opacity = 1;
 
+  }
+}
 
+function isScreenSize(){
+ let is768 = window.matchMedia("(min-width: 768px)")
+
+ is768.addEventListener("change", returnEvent)
+
+}
+
+function returnEvent (e) {
+  return trace(e)
+}
