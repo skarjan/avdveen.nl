@@ -37,6 +37,70 @@ function deactivateLanguageLink(links, borders, i) {
 
 }
 
+
+function activateLanguageLink(links, borders, i) {
+
+  links[i].classList.add("active-lang");
+  links[i].classList.remove("lang-link");
+
+  borders[i].classList.add("active-lang-border");
+  borders[i].classList.remove("lang-border");
+
+}
+
+function isLinkExternal(anchor) {
+  return anchor.children[0].hasAttribute("target");
+}
+
+
+function addMenuEventListeners() {
+
+  // event listeners to show/hide the menu on small screens
+  document.getElementById("menu-hb").addEventListener("click", toggleMenu);
+  document.getElementsByClassName("content")[0].addEventListener("click", toggleMenu);
+
+  // event listeners to display active/inactive links
+  addClickListeners("anchor", "border");
+  // addMenuClickListeners();
+  addLanguageClickListeners();
+}
+
+function addClickListeners(link, border){
+  let links = document.getElementsByClassName(link);
+  let borders = document.getElementsByClassName(border);
+  for (let i = 0; i < links.length; i++) {
+
+    links[i].addEventListener("click", function () {
+      trace(this.classList);
+      if (!isLinkExternal(this)) {
+        
+        deactivateLink();
+        activateLink(links, borders, i);
+
+      }
+    })
+  }
+}
+
+
+function addMenuClickListeners() {
+
+  let links = document.getElementsByClassName("anchor");
+  let borders = document.getElementsByClassName("border");
+
+  for (let i = 0; i < links.length; i++) {
+
+    links[i].addEventListener("click", function () {
+
+      if (!isLinkExternal(this)) {
+        deactivateLink();
+        activateLink(links, borders, i);
+
+      }
+    })
+  }
+}
+
 function deactivateLink() {
 
   elLink = document.getElementsByClassName("active-link");
@@ -61,58 +125,15 @@ function activateLink(links, borders, i) {
 
 }
 
-function activateLanguageLink(links, borders, i) {
-
-  links[i].classList.add("active-lang");
-  links[i].classList.remove("lang-link");
-
-  borders[i].classList.add("active-lang-border");
-  borders[i].classList.remove("lang-border");
-
-}
-
-function isLinkExternal(anchor) {
-  return anchor.children[0].hasAttribute("target");
-}
-
-
-function addMenuEventListeners() {
-
-  // event listeners to show/hide the menu on small screens
-  document.getElementById("menu-hb").addEventListener("click", toggleMenu);
-  document.getElementsByClassName("content")[0].addEventListener("click", toggleMenu);
-
-  // event listeners to display active/inactive links
-  addMenuClickListeners();
-}
-
-
-function addMenuClickListeners() {
-
-  let links = document.getElementsByClassName("anchor");
-  let borders = document.getElementsByClassName("border");
-
-  for (let i = 0; i < links.length; i++) {
-
-    links[i].addEventListener("click", function () {
-
-      if (!isLinkExternal(this)) {
-        deactivateLink();
-        activateLink(links, borders, i);
-
-      }
-    })
-  }
-}
 
 function addLanguageClickListeners() {
 
-  let links = document.getElementsByClassName("js-anchor");
-  let borders = document.getElementsByClassName("js-border");
+  let links = document.getElementsByClassName("lang-anchor");
+  let borders = document.getElementsByClassName("lang-border");
   for (let i = 0; i < links.length; i++) {
 
     links[i].addEventListener("click", function () {
-
+      trace(this);
       if (!isLinkExternal(this)) {
         deactivateLanguageLink(links, borders, i);
         activateLanguageLink(links, borders, i);
