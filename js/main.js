@@ -1,3 +1,5 @@
+"use strict";
+
 function trace(msg) {
   let traceOn = true;
 
@@ -50,9 +52,8 @@ function addClickListeners(link, border, activeAnchor, activeBorder, anchor, reg
   for (let i = 0; i < links.length; i++) {
 
     links[i].addEventListener("click", function () {
-      
-      if (!isLinkExternal(this)) {
-
+      let self = this;
+      if (!isLinkExternal(self)) {
         deactivateLink(activeAnchor, activeBorder, anchor, regularBorder);
         activateLink(links, borders, i, activeAnchor, activeBorder, anchor, regularBorder);
 
@@ -65,8 +66,8 @@ function addClickListeners(link, border, activeAnchor, activeBorder, anchor, reg
 
 function deactivateLink (activeAnchor, activeBorder, anchor, border) {
   // needs the active language lin
-  elLink = document.getElementsByClassName(activeAnchor);
-  elBorder = document.getElementsByClassName(activeBorder);
+  let elLink = document.getElementsByClassName(activeAnchor);
+  let elBorder = document.getElementsByClassName(activeBorder);
   // needs the inactive language link
   elLink[0].classList.add(anchor);
   elLink[0].classList.remove(activeAnchor);
@@ -89,10 +90,12 @@ function activateLink(links, borders, i, activeAnchor, activeBorder, anchor, bor
 
 
 function toggleMenu() {
+  let self = this;
 
   // show/hide on hb menu icon click
   let linkContainer = document.getElementById("linkContainer");
-  if (linkContainer.classList[0] !== 'responsive-links' && this.classList[0] == "menu-hb") {
+
+  if (linkContainer.classList[0] !== 'responsive-links' && self.classList[0] == "menu-hb") {
 
     // show
     linkContainer.classList.add('responsive-links');
@@ -109,7 +112,7 @@ function toggleMenu() {
       document.getElementsByClassName("responsive-links")[0].style.opacity = "100";
     }, 1);
 
-  } else if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] === "menu-hb") {
+  } else if (linkContainer.classList[0] == 'responsive-links' && self.classList[0] === "menu-hb") {
 
     // animate
     document.getElementsByClassName("responsive-links")[0].style.top = "75px";
@@ -124,7 +127,7 @@ function toggleMenu() {
   }
 
   // hide menu if user clicks on the body
-  if (linkContainer.classList[0] == 'responsive-links' && this.classList[0] == "content") {
+  if (linkContainer.classList[0] == 'responsive-links' && self.classList[0] == "content") {
 
     // animate
     document.getElementsByClassName("responsive-links")[0].style.opacity = "0";
@@ -146,7 +149,7 @@ function toggleMenu() {
 // Work around for opacity issue
 function is1080Wide() {
 
-  var mQ = window.matchMedia("(min-width: 1080px)")
+  var mQ = window.matchMedia("(min-width: 1080px)");
 
   mQ.addEventListener("change", setOpacityOnLinks);
 }
@@ -161,12 +164,12 @@ function setOpacityOnLinks(mediaQuery) {
 }
 
 function isScreenSize(){
- let is768 = window.matchMedia("(min-width: 768px)")
+ let is768 = window.matchMedia("(min-width: 768px)");
 
- is768.addEventListener("change", returnEvent)
+ is768.addEventListener("change", returnEvent);
 
 }
 
 function returnEvent (e) {
-  return trace(e)
+  return trace(e);
 }
