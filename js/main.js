@@ -2,8 +2,8 @@ function trace(msg) {
   let traceOn = true;
 
   if (traceOn) {
-    return console.log(msg)
-  };
+    return console.log(msg);
+  }
 }
 
 
@@ -21,33 +21,6 @@ function docReady(fn) {
 
 }
 
-
-function deactivateLanguageLink(links, borders, i) {
-
-  elLink = document.getElementsByClassName("active-lang");
-  elBorder = document.getElementsByClassName("active-lang-border");
-
-  elLink[0].classList.add("lang-link");
-  elLink[0].classList.remove("active-lang");
-
-  elBorder[0].classList.add("lang-border");
-  elBorder[0].classList.remove("active-lang-border");
-
-
-
-}
-
-
-function activateLanguageLink(links, borders, i) {
-
-  links[i].classList.add("active-lang");
-  links[i].classList.remove("lang-link");
-
-  borders[i].classList.add("active-lang-border");
-  borders[i].classList.remove("lang-border");
-
-}
-
 function isLinkExternal(anchor) {
   return anchor.children[0].hasAttribute("target");
 }
@@ -55,18 +28,22 @@ function isLinkExternal(anchor) {
 
 function addMenuEventListeners() {
 
-  // event listeners to show/hide the menu on small screens
+  // event listeners to show/hide the menu on small screen
+  // show/hide when clicking the hamburger icon
   document.getElementById("menu-hb").addEventListener("click", toggleMenu);
+
+  // hide when clicking (almost) anywhere on the page
   document.getElementsByClassName("content")[0].addEventListener("click", toggleMenu);
 
   // event listeners to display active/inactive links
   addClickListeners("anchor", "border", "active-link", "active-border", "hov-link", "hov-border");
   addClickListeners("lang-anchor", "lang-border", "active-lang", "active-lang-border", "lang-link", "lang-border");
-  // addMenuClickListeners();
-  // addLanguageClickListeners();
 }
 
-function addClickListeners(link, border, activeAnchor, activeBorder, anchor, border){
+
+
+function addClickListeners(link, border, activeAnchor, activeBorder, anchor, regularBorder){
+
   let links = document.getElementsByClassName(link);
   let borders = document.getElementsByClassName(border);
 
@@ -75,33 +52,18 @@ function addClickListeners(link, border, activeAnchor, activeBorder, anchor, bor
     links[i].addEventListener("click", function () {
       
       if (!isLinkExternal(this)) {
-        newDeactivate(activeAnchor, activeBorder, anchor, border);
-        newActivateLink(links, borders, i, activeAnchor, activeBorder, anchor, border);
+
+        deactivateLink(activeAnchor, activeBorder, anchor, regularBorder);
+        activateLink(links, borders, i, activeAnchor, activeBorder, anchor, regularBorder);
 
       }
-    })
+    });
   }
 }
 
 
-function addMenuClickListeners() {
 
-  let links = document.getElementsByClassName("anchor");
-  let borders = document.getElementsByClassName("border");
-
-  for (let i = 0; i < links.length; i++) {
-
-    links[i].addEventListener("click", function () {
-
-      if (!isLinkExternal(this)) {
-        deactivateLink();
-        activateLink(links, borders, i);
-
-      }
-    })
-  }
-}
-function newDeactivate (activeAnchor, activeBorder, anchor, border) {
+function deactivateLink (activeAnchor, activeBorder, anchor, border) {
   // needs the active language lin
   elLink = document.getElementsByClassName(activeAnchor);
   elBorder = document.getElementsByClassName(activeBorder);
@@ -115,7 +77,7 @@ function newDeactivate (activeAnchor, activeBorder, anchor, border) {
 }
 
 
-function newActivateLink(links, borders, i, activeAnchor, activeBorder, anchor, border) {
+function activateLink(links, borders, i, activeAnchor, activeBorder, anchor, border) {
 
   links[i].classList.add(activeAnchor);
   links[i].classList.remove(anchor);
@@ -123,65 +85,6 @@ function newActivateLink(links, borders, i, activeAnchor, activeBorder, anchor, 
   borders[i].classList.add(activeBorder);
   borders[i].classList.remove(border);
 
-}
-  // // PREP!!!
-
-  // // needs the active language link
-  // elLink = document.getElementsByClassName("active-lang");
-  // elBorder = document.getElementsByClassName("active-lang-border");
-  // // needs the inactive language link
-  // elLink[0].classList.add("lang-link");
-  // elLink[0].classList.remove("active-lang");
-
-
-  // // needs the active menu link
-  // elLink = document.getElementsByClassName("active-link");
-  // elBorder = document.getElementsByClassName("active-border");
-  // // needs the inactive menu link
-  // elBorder[0].classList.add("hov-border");
-  // elBorder[0].classList.remove("active-border");
-
-
-function deactivateLink() {
-
-  elLink = document.getElementsByClassName("active-link");
-  elBorder = document.getElementsByClassName("active-border");
-
-  elLink[0].classList.add("hov-link");
-  elLink[0].classList.remove("active-link");
-
-  elBorder[0].classList.add("hov-border");
-  elBorder[0].classList.remove("active-border");
-
-}
-
-
-function activateLink(links, borders, i) {
-
-  links[i].classList.add("active-link");
-  links[i].classList.remove("hov-link");
-
-  borders[i].classList.add("active-border");
-  borders[i].classList.remove("hov-border");
-
-}
-
-
-function addLanguageClickListeners() {
-
-  let links = document.getElementsByClassName("lang-anchor");
-  let borders = document.getElementsByClassName("lang-border");
-  for (let i = 0; i < links.length; i++) {
-
-    links[i].addEventListener("click", function () {
-      trace(this);
-      if (!isLinkExternal(this)) {
-        deactivateLanguageLink(links, borders, i);
-        activateLanguageLink(links, borders, i);
-
-      }
-    })
-  }
 }
 
 
