@@ -60,22 +60,23 @@ function addMenuEventListeners() {
   document.getElementsByClassName("content")[0].addEventListener("click", toggleMenu);
 
   // event listeners to display active/inactive links
-  addClickListeners("anchor", "border");
+  addClickListeners("anchor", "border", "active-link", "active-border", "hov-link", "hov-border");
+  addClickListeners("lang-anchor", "lang-border", "active-lang", "active-lang-border", "lang-link", "lang-border");
   // addMenuClickListeners();
-  addLanguageClickListeners();
+  // addLanguageClickListeners();
 }
 
-function addClickListeners(link, border){
+function addClickListeners(link, border, activeAnchor, activeBorder, anchor, border){
   let links = document.getElementsByClassName(link);
   let borders = document.getElementsByClassName(border);
+
   for (let i = 0; i < links.length; i++) {
 
     links[i].addEventListener("click", function () {
-      trace(this.classList);
+      
       if (!isLinkExternal(this)) {
-        
-        deactivateLink();
-        activateLink(links, borders, i);
+        newDeactivate(activeAnchor, activeBorder, anchor, border);
+        newActivateLink(links, borders, i, activeAnchor, activeBorder, anchor, border);
 
       }
     })
@@ -100,6 +101,46 @@ function addMenuClickListeners() {
     })
   }
 }
+function newDeactivate (activeAnchor, activeBorder, anchor, border) {
+  // needs the active language lin
+  elLink = document.getElementsByClassName(activeAnchor);
+  elBorder = document.getElementsByClassName(activeBorder);
+  // needs the inactive language link
+  elLink[0].classList.add(anchor);
+  elLink[0].classList.remove(activeAnchor);
+
+  elBorder[0].classList.add(border);
+  elBorder[0].classList.remove(activeBorder);
+  
+}
+
+
+function newActivateLink(links, borders, i, activeAnchor, activeBorder, anchor, border) {
+
+  links[i].classList.add(activeAnchor);
+  links[i].classList.remove(anchor);
+
+  borders[i].classList.add(activeBorder);
+  borders[i].classList.remove(border);
+
+}
+  // // PREP!!!
+
+  // // needs the active language link
+  // elLink = document.getElementsByClassName("active-lang");
+  // elBorder = document.getElementsByClassName("active-lang-border");
+  // // needs the inactive language link
+  // elLink[0].classList.add("lang-link");
+  // elLink[0].classList.remove("active-lang");
+
+
+  // // needs the active menu link
+  // elLink = document.getElementsByClassName("active-link");
+  // elBorder = document.getElementsByClassName("active-border");
+  // // needs the inactive menu link
+  // elBorder[0].classList.add("hov-border");
+  // elBorder[0].classList.remove("active-border");
+
 
 function deactivateLink() {
 
