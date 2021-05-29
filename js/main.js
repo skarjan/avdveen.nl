@@ -162,14 +162,3 @@ function setOpacityOnLinks(mediaQuery) {
 
   }
 }
-
-function isScreenSize(){
- let is768 = window.matchMedia("(min-width: 768px)");
-
- is768.addEventListener("change", returnEvent);
-
-}
-
-function returnEvent (e) {
-  return trace(e);
-}
