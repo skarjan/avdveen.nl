@@ -30,7 +30,6 @@ function isLinkExternal(anchor) {
 
 function addMenuEventListeners() {
 
-  // event listeners to show/hide the menu on small screen
   // show/hide when clicking the hamburger icon
   document.getElementById("menu-hb").addEventListener("click", toggleMenu);
 
