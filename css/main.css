@@ -227,7 +227,10 @@ small {
   border-top: 3px solid #990000;
 }
 
-/* demo mode */
+/* this hides the copy of text which is used to determine the border length */
+.border {
+  user-select: none;
+}
 .flex-container {
   padding: 36px 8px;
   margin: 0 auto;
