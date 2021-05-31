@@ -11,6 +11,9 @@
 
 
 /* Element styles */
+html {
+  font-size: 14px;
+}
 body {
   background-color: #ffffff;
   line-height:1.4em;
@@ -84,7 +87,9 @@ small {
 .clr-dark-red {
   color: #7c0000 
 }
-
+.sm-text {
+  font-size:12px;
+}
 /* custom styles */
 /* baseline */
 .content {
@@ -116,15 +121,6 @@ small {
   font-size: 14px;
   font-weight: 600;
 }
-
-.frame-sm h5 {
-  font-size: 18px;
-}
-
-.frame-sm h4 {
-  font-size: 20px;
-}
-
 .frame-sm-img {
   min-width: 320px;
   max-width: 686px;
@@ -153,6 +149,9 @@ small {
   min-width: 65px
 }
 
+.skills {
+  font-size: 12px;
+}
 .quote-container {
   font-size: 14px;
   float: right;
@@ -522,7 +521,7 @@ small {
   }
 
   .text-content>p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
