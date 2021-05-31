@@ -12,7 +12,7 @@
 
 /* Element styles */
 html {
-  font-size: 14px;
+  font-size: 15px;
 }
 body {
   background-color: #ffffff;
@@ -134,9 +134,13 @@ small {
   max-width: 600px;
   padding: 16px 16px;
 }
-.intro-holder {
-  max-width: 450px;
+.personalia-frame {
+  min-width: 320px;
+  max-width: 600px;
+  padding: 16px 16px;
 }
+
+
 .shadow {
   box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
 }
@@ -299,6 +303,7 @@ small {
 
   .frame,
   .frame-sm,
+  .personalia-frame,
   .intro-frame,
   .frame-sm-img {
     margin: .5rem 0;
@@ -321,7 +326,7 @@ small {
     max-width: 100%;
     margin-bottom: 14px;
   }
-
+  .personalia-frame,
   .intro-frame,
   .twitter-frame {
     max-width: 100%;
@@ -420,12 +425,15 @@ small {
     max-width: 49%;
     margin-bottom: 14px;
   }
-
+  .personalia-frame,
   .intro-frame,
   .twitter-frame {
     max-width: 100%;
   }
-
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
   .twitter-frame {
     margin-left: auto;
     margin-right: auto;
@@ -503,12 +511,16 @@ small {
   .frame-sm {
     max-width: 334px;
   }
-
+  .personalia-frame,
   .intro-frame {
     min-width: 0;
     max-width: 100%;
   }
+  .intro-holder {
+    max-width: 450px;
+  }
 
+  .personalia-frame,
   .frame,
   .frame-sm,
   .intro-frame {
