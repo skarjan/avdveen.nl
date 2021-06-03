@@ -1,0 +1,547 @@
+@media print {
+ 
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bungee&display=swap');
+
+/* colors */
+/* primary: #990000 */
+/* dark-red: #7c0000 */
+/* light-red: #ba0001 */
+
+
+/* Element styles */
+html {
+  font-size: 15px;
+}
+body {
+  background-color: #ffffff;
+  line-height:1.4em;
+}
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.2;
+  margin-bottom: .5rem;
+  
+}
+p {
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+small {
+  font-size: 12px;
+}
+/* Flex classes */
+.flex-items-centered {
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+/* utility classes */
+.clr-mrn-red {
+  color: #990000;
+}
+.clr-dark-red {
+  color: #7c0000 
+}
+.sm-text {
+  font-size:12px;
+}
+/* custom styles */
+/* baseline */
+.content {
+  min-width: 320px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.frame {
+  max-width: 685px;
+  min-width: 320px;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+  padding: 16px 16px;
+}
+
+.frame-sm {
+  /* placeholder props */
+  min-width: 320px;
+  max-width: 444px;
+  /* placeholder props */
+  padding: 16px 16px;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.frame-sm a {
+  float: right;
+  color: #990000;
+  font-size: 14px;
+  font-weight: 600;
+}
+.frame-sm-img {
+  min-width: 320px;
+  max-width: 686px;
+  margin: 8px;
+  padding: 16px 16px;
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.intro-frame {
+  min-width: 320px;
+  max-width: 600px;
+  padding: 16px 16px;
+}
+.personalia-frame {
+  min-width: 320px;
+  max-width: 600px;
+  padding: 16px 16px;
+}
+
+
+.shadow {
+  box-shadow: 0px 2px 18px 0px rgb(0 0 0 / 30%);
+}
+
+.text-content {
+  color: black;
+}
+
+.image-content {
+  min-width: 65px
+}
+
+.skills {
+  font-size: 12px;
+}
+.quote-container {
+  font-size: 14px;
+  float: right;
+}
+
+.flex-horizontal {
+  display: flex;
+
+}
+
+.img-container {
+  padding: 16px;
+  margin: 8px;
+  max-width: 682px;
+}
+
+.img-container i {
+  line-height: 1.7rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 320px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 34px;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.hov-link,
+.lang-link {
+  padding: 8px 12px;
+  display: inline-block;
+  position: relative;
+}
+
+.eng {
+  padding: 8px 12px 8px 0 !important;
+}
+
+.nl {
+  padding: 8px 0 8px 12px !important;
+}
+
+.hov-border,
+.lang-border {
+  position: absolute;
+  top: 34px;
+  border-top: solid 3px rgb(157, 7, 67, 0%);
+  color: rgb(0, 0, 0, 0%);
+  transition-property: border-top, top;
+  transition-duration: .4s, .5s;
+}
+
+.hov-link:hover>.hov-border,
+.lang-link:hover>.lang-border {
+  border-top: solid 3px rgb(157, 7, 67, 100%);
+  top: 30px;
+}
+
+.active-link,
+.active-lang {
+  position: relative;
+  padding: 8px 12px;
+  display: inline-block;
+  position: relative;
+  color: #990000;
+}
+
+.active-border,
+.active-lang-border {
+  position: absolute;
+  top: 30px;
+  color: rgb(0, 0, 0, 0%);
+  border-top: 3px solid #990000;
+}
+
+/* this hides the copy of text which is used to determine the border length */
+.border {
+  user-select: none;
+}
+.flex-container {
+  padding: 36px 8px;
+  margin: 0 auto;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fancy {
+  font-family: 'Bungee', cursive;
+  font-weight: 500;
+  margin: 0;
+}
+
+.flx {
+  display: flex;
+}
+
+.resize-icon {
+  width: 25px;
+  margin: 0 2px;
+}
+
+.footer {
+  min-width: 320px;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 44px;
+}
+
+.q-label {
+  margin-bottom: .5rem;
+}
+
+.flag-icon {
+  top: 12px;
+}
+.sm-menu-container {
+  font-size: 14px;
+}
+
+/* end of baseline */
+
+
+/* ********************************************** */
+/*  Responsiveness */
+/* ********************************************** */
+
+
+/*  small phones */
+
+@media only screen and (max-width: 444px) {
+
+  .content {
+    padding: 0;
+  }
+
+  .flex-items-centered {
+    flex-direction: column;
+  }
+
+  .frame,
+  .frame-sm,
+  .personalia-frame,
+  .intro-frame,
+  .frame-sm-img {
+    margin: .5rem 0;
+  }
+
+}
+
+/* big phones */
+
+@media only screen and (min-width: 444px) and (max-width: 768px) {
+  .frame {
+    margin-bottom: 14px;
+  }
+
+  .flex-items-centered {
+    flex-direction: column;
+  }
+
+  .frame-sm {
+    max-width: 100%;
+    margin-bottom: 14px;
+  }
+  .personalia-frame,
+  .intro-frame,
+  .twitter-frame {
+    max-width: 100%;
+  }
+
+  .twt .frame-sm {
+    max-width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .frame-sm-img {
+    margin: .5rem 0;
+    max-width: 100%;
+  }
+
+  .flex-container {
+    padding: 36px;
+  }
+
+  .menu-hb {
+    position: relative;
+  }
+
+
+}
+
+/* big and small phones */
+
+@media only screen and (max-width: 768px) {
+  .hide {
+    display: none;
+    opacity: 0;
+  }
+
+  .show {
+    display: inline-block;
+    opacity: 1;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .responsive-links {
+    box-shadow: 0px 8px 18px 0px rgb(0 0 0 / 30%);
+    max-width: 748px;
+    width: 100%;
+    top: 75px;
+    left: 0px;
+    background-color: #fff;
+    position: absolute;
+    padding-bottom: 16px;
+    transition: top, .2s;
+    z-index: 1;
+    padding: 8px 0;
+    transition: top, .5s;
+  }
+
+  .responsive-links>div {
+    display: block;
+  }
+
+  .sm-menu-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+
+
+/* tablets */
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: inline-block;
+  }
+
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .frame {
+    min-width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .frame-sm {
+    max-width: 49%;
+    margin-bottom: 14px;
+  }
+  .personalia-frame,
+  .intro-frame,
+  .twitter-frame {
+    max-width: 100%;
+  }
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .twitter-frame {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .frame-sm-img {
+    min-width: 320px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .img-container {
+    padding: 16px;
+    margin: 8px;
+    max-width: 1080px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .responsive-links {
+    box-shadow: 0px 8px 18px 0px rgb(0 0 0 / 30%);
+    max-width: 1060px;
+    min-width: 768px;
+    width: 100%;
+    top: 75px;
+    left: 0;
+    background-color: #fff;
+    position: absolute;
+    padding: 8px 0;
+    transition: top, .5s, opacity, .4s;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .responsive-links>div {
+    display: block;
+  }
+
+  .sm-menu-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+}
+
+/* Laptop and bigger */
+
+@media only screen and (min-width: 1080px) {
+  .nav-menu-sm {
+    display: none;
+  }
+
+  .op {
+    opacity: 1;
+  }
+
+  .column {
+    display: flex;
+    align-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .frame {
+    min-width: 685px;
+  }
+
+  .frame-sm {
+    max-width: 334px;
+  }
+  .personalia-frame,
+  .intro-frame {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .intro-holder {
+    max-width: 450px;
+  }
+
+  .personalia-frame,
+  .frame,
+  .frame-sm,
+  .intro-frame {
+    margin: .5rem;
+  }
+
+  .twitter-frame {
+    margin: 10px .5rem .5rem;
+    max-width: 324px;
+  }
+
+  .text-content>p {
+    font-size: 12px;
+  }
+}
+
+.link-lang-container {
+  display: flex;
+  align-items: baseline;
+}
+}
