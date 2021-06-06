@@ -3,6 +3,4 @@ RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://www.avdveen.nl/$1 [R,L]
 </IfModule>
-# RewriteEngine on
-# RewriteCond %{HTTP_HOST} ^spshs.avdveen.nl
-# RewriteRule ^(.*)$ /spshs/$1 [L,NC,QSA]
+
