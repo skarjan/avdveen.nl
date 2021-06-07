@@ -2,9 +2,9 @@
 ## a front end developer's portfolio website. 
 
 ### Summary
-This is a homepage ultimately designed to showcase my skills. In order for that to happen, said skills need to be aquired. This is one of the many attempts I do. 
+This is a homepage ultimately designed to showcase my skills. In order for that to happen, said skills need to be aquired. This is one of those many attempts. 
 
-### Goal(s) 
+### Goals
 
 #### Improve load times
 
@@ -18,5 +18,16 @@ The 4th is performance and depending on the connection varies wildly.
 From 90+ locally to a score of 28 on a public wifi connection.
 
 It seems I can speed things up by appropriatly sizing the images.
+Looking to read up on this. MDN seems to have a good article. 
+
+#### Add English version
+
+Currently everything is in Dutch. Acknowledged with the fact that 'ENG' language selector is disabled. 
+I need to sit down one afternoon and get it done. 
+
+#### Àdd a projects section
+
+I'd like to demo more of my skills with additional projects. Like the 'Bootstrap Form Validation' I did.
+
 
 ##### TO BE CONTINUED
