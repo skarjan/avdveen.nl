@@ -294,7 +294,7 @@ small {
   font-size: 14px;
 }
 
-/* AppThatPass */
+/* PassProtect */
 .password-field {
   width: 375px;
   padding: 5px;
@@ -470,7 +470,19 @@ input[type=range]:focus::-ms-fill-upper {
   .flex-items-centered {
     flex-direction: column;
   }
-
+  .password-field {
+    width: 100%;;
+    padding: 5px;
+    margin-bottom: .4rem;
+    font-size: 1.1rem;
+    border: 1px solid #ba0001;
+  }
+  .generator-holder {
+    width:100%;
+  }
+  .password-length {
+    width: 100%;
+  }
   .frame-sm {
     max-width: 100%;
     margin-bottom: 14px;
