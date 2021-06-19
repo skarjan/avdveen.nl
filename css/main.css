@@ -305,7 +305,12 @@ small {
 .password-length {
   width:300px;
 }
-
+.generator-holder{
+  width: 60%;
+}
+.lock-holder {
+  margin: 0 auto;
+}
 /* buttons */
 .bttn {
   min-width: 75px;
@@ -546,7 +551,9 @@ small {
   .op {
     opacity: 1;
   }
-
+.align-y {
+  align-items: center;
+}
   .column {
     display: flex;
     align-content: flex-start;

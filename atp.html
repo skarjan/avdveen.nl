@@ -129,20 +129,21 @@
   <div class="content">
     <main class="column" id="left-side">
       <section class="frame flex-items-centered">
-        <div><img alt="Illustration of a person presenting a lock" src="img/slot.svg">
+        <div>
+          <img alt="Illustration of a person presenting a lock" src="img/slot.svg">
         </div>
 
 
         <div>
-          <h2>AppThatPass...</h2>
+          <h2>PassProtect...</h2>
 
 
           <p>…genereerd veilige wachtwoorden voor jou om te gebruiken. </p>
 
 
-          <p>Dit doe ik met enkele functies geschreven in Javascript. Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Blanditiis similique totam doloribus distinctio dicta earum veritatis accusamus necessitatibus harum.
-            Vero consequuntur quia repellendus sint ducimus dolor nemo culpa, minus ut?</p>
+          <p>Dit doe ik met enkele functies geschreven in Javascript. Je kan een combinatie
+            van alfanumerieke tekens, cijfers en (bijna) alle speciale tekens.
+          </p>
 
 
 
@@ -151,31 +152,37 @@
 
 
 
-      <section class="frame">
+      <section class="frame flex-horizontal align-y">
+        <div class="generator-holder">
 
-        <h2>Generator</h2>
-        <p>Gebruik de onderstaande opties om de eigenschappen van het wachtwoord aan te passen.</p>
-        <div>
-          <input id="jsPassField" class="password-field" type="text" placeholder="Hier komt het wachwoord..." spellcheck="false">
+          <h2>Generator</h2>
+          <p>Gebruik de onderstaande opties om de eigenschappen van het wachtwoord aan te passen.</p>
+          <div>
+            <input id="jsPassField" class="password-field" type="text" placeholder="Hier komt het wachwoord..."
+              spellcheck="false">
+          </div>
+          <div id="jsPassLengthHolder">
+            <label for="jsPassLength">Lengte: <span id="jsPassLengthValue">12</span></label>
+            <input id="jsPassLength" class="password-length" type="range" value="12" min="8" max="40">
+          </div>
+
+          <input id="jsAlpha" type="checkbox" checked>
+          <label class="checkbox" for="jsAlpha">Alfanumerieke tekens
+            <input id="jsNumbers" type="checkbox">
+            <label class="checkbox" for="jsNumbers">Cijfers
+              <input id="jsSymbols" type="checkbox">
+              <label class="checkbox" for="jsSymbols">Speciale tekens
+
+                <div>
+                  <button id="jsGenerate" class="bttn bttn-main" type="button">Genereer</button>
+                  <button id="jsCopy" class="bttn bttn-main" type="button">Kopiëer</button>
+
+                </div>
+
         </div>
-        <div id="jsPassLengthHolder">
-          <label for="jsPassLength">Lengte: <span id="jsPassLengthValue">12</span></label>
-          <input id="jsPassLength" class="password-length" type="range" value="12" min="8" max="40">
+        <div class="lock-holder">
+          <img id="jsLock" src="img/unblock.svg" alt="">
         </div>
-
-        <input id="jsAlpha" type="checkbox" checked>
-        <label class="checkbox" for="jsAlpha">Alfanumerieke tekens
-          <input id="jsNumbers" type="checkbox">
-          <label class="checkbox" for="jsNumbers">Cijfers
-            <input id="jsSymbols" type="checkbox">
-            <label class="checkbox" for="jsSymbols">Speciale tekens
-
-              <div>
-                <button id="jsGenerate" class="bttn bttn-main" type="button">Genereer</button>
-                <button id="jsCopy" class="bttn bttn-main" type="button">Kopiëer</button>
-
-              </div>
-
       </section>
 
       <figure class="frame-sm-img">
