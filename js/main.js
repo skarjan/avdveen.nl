@@ -43,7 +43,7 @@ function addMenuEventListeners() {
 
 
 
-function addClickListeners(link, border, activeAnchor, activeBorder, anchor, regularBorder){
+function addClickListeners(link, border, activeAnchor, activeBorder, anchor, regularBorder) {
 
   let links = document.getElementsByClassName(link);
   let borders = document.getElementsByClassName(border);
@@ -63,7 +63,7 @@ function addClickListeners(link, border, activeAnchor, activeBorder, anchor, reg
 
 
 
-function deactivateLink (activeAnchor, activeBorder, anchor, border) {
+function deactivateLink(activeAnchor, activeBorder, anchor, border) {
   // needs the active language lin
   let elLink = document.getElementsByClassName(activeAnchor);
   let elBorder = document.getElementsByClassName(activeBorder);
@@ -73,7 +73,7 @@ function deactivateLink (activeAnchor, activeBorder, anchor, border) {
 
   elBorder[0].classList.add(border);
   elBorder[0].classList.remove(activeBorder);
-  
+
 }
 
 
@@ -177,3 +177,49 @@ const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = 1234567890;
 const symbols = `!@#$%^&*()_+[]{}|;':\",./<>?`;
 
+let pwField = id('jsPassField');
+let pwLengthElement = id('jsPassLength');
+let pwLengthValue = id('jsPassLengthValue');
+let alphaCheck = id('jsAlpha');
+let numberCheck = id('jsNumbers');
+let symbolCheck = id('jsSymbols');
+let genButton = id('jsGenerate');
+let copyButton = id('jsCopy');
+
+// let pwLength = 0;
+
+// pwLengthElement.addEventListener("change", () => {
+//   pwLength = parseInt(pwLengthElement.value);
+// })
+
+
+const generatePw = (length, characters) => {
+  let passWord = "";
+
+  for (let i = 0; i < length; i++) {
+    passWord += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return passWord;
+}
+
+pwLengthElement.addEventListener("change", () => {
+  pwLengthValue.innerHTML = pwLengthElement.value;
+})
+
+genButton.addEventListener("click", () => {
+  let pwLength = parseInt(pwLengthElement.value)
+  
+  let characters = "";
+  if (alphaCheck.checked) {
+    characters += alpha;
+  }
+  if (numberCheck.checked) {
+    characters += symbols;
+  }
+  if (symbolCheck.checked) {
+    characters += symbols;
+  }
+  pwField.value = generatePw(pwLength, characters);
+})

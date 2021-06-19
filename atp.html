@@ -156,23 +156,23 @@
         <h2>Generator</h2>
         <p>Gebruik de onderstaande opties om de eigenschappen van het wachtwoord aan te passen.</p>
         <div>
-          <input class="password-field" type="text" placeholder="Hier komt het wachwoord...">
+          <input id="jsPassField" class="password-field" type="text" placeholder="Hier komt het wachwoord..." spellcheck="false">
         </div>
         <div id="jsPassLengthHolder">
-          <label for="jsPassLength">Lengte: <span id="passLengthValue">12</span></label>
-          <input id="jsPassLength" class="password-length" type="range" value="12" min="8" max="64">
+          <label for="jsPassLength">Lengte: <span id="jsPassLengthValue">12</span></label>
+          <input id="jsPassLength" class="password-length" type="range" value="12" min="8" max="40">
         </div>
 
-        <input id="jsCheck-1" type="checkbox" checked>
-        <label class="checkbox" for="checkbox-4">Alfanumerieke tekens
-          <input id="jsCheck-2" type="checkbox">
-          <label class="checkbox" for="checkbox-4">Cijfers
-            <input id="jsCheck-3" type="checkbox">
-            <label class="checkbox" for="checkbox-4">Speciale tekens
+        <input id="jsAlpha" type="checkbox" checked>
+        <label class="checkbox" for="jsAlpha">Alfanumerieke tekens
+          <input id="jsNumbers" type="checkbox">
+          <label class="checkbox" for="jsNumbers">Cijfers
+            <input id="jsSymbols" type="checkbox">
+            <label class="checkbox" for="jsSymbols">Speciale tekens
 
               <div>
-                <button id="jsGenerate" class="bttn bttn-main" type="button">Generate</button>
-                <button id="jsCopy" class="bttn bttn-main" type="button">Copy</button>
+                <button id="jsGenerate" class="bttn bttn-main" type="button">Genereer</button>
+                <button id="jsCopy" class="bttn bttn-main" type="button">Kopiëer</button>
 
               </div>
 
