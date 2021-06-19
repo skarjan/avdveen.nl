@@ -25,7 +25,11 @@ Looking to read up on this. MDN seems to have a good article.
 Currently everything is in Dutch. Acknowledged with the fact that 'ENG' language selector is disabled. 
 I need to sit down one afternoon and get it done. 
 
-#### Àdd a projects section
+#### Add password generator
+
+I'm building AppThatPass that I want to add to the homepage. 
+
+#### Add a projects section
 
 I'd like to demo more of my skills with additional projects. Like the 'Bootstrap Form Validation' I did.
 
