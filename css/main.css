@@ -281,6 +281,34 @@ small {
   font-size: 14px;
 }
 
+/* AppThatPass */
+.password-field {
+  padding:5px;
+  font-size:22px;
+  border: 1px solid #ba0001;
+}
+/* buttons */
+.bttn {
+  min-width: 75px;
+  border-radius: 3px;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: .1rem;
+}
+.bttn-main {
+  background-color: #990000;
+  border:1px solid #990000;
+  color:#ffffff;
+  
+}
+.bttn-main:hover {
+  background-color: #7c0000;
+  border:1px solid #7c0000;
+  color:#ffffff;
+
+  
+}
+
 /* end of baseline */
 
 
