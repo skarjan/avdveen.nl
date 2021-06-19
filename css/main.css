@@ -19,9 +19,16 @@ body {
   background-color: #ffffff;
   line-height: 1.4em;
 }
+a {
+  text-decoration: none!important;
+}
+.frame a {
+  color: #9f0000;
+}
 
-a:hover {
-  text-decoration: none;
+.frame a:hover {
+  text-decoration: underline;
+  color: #9f0000;
 }
 
 h1 {
@@ -97,7 +104,9 @@ small {
 .sm-text {
   font-size: 12px;
 }
-
+.float-right {
+  float:right;
+}
 /* custom styles */
 /* baseline */
 .content {
@@ -124,7 +133,6 @@ small {
 }
 
 .frame-sm a {
-  float: right;
   color: #990000;
   font-size: 14px;
   font-weight: 600;
@@ -481,7 +489,7 @@ input[type=range]:focus::-ms-fill-upper {
     width:100%;
   }
   .password-length {
-    width: 100%;
+    width: 80%;
   }
   .frame-sm {
     max-width: 100%;
