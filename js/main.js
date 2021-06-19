@@ -161,3 +161,19 @@ function setOpacityOnLinks(mediaQuery) {
 
   }
 }
+
+// Helper functions
+
+const id = id => {
+  return document.getElementById(id);
+}
+
+const cl = cl => {
+  return document.getElementsByClassName(cl);
+}
+
+// AppThatPass functionality
+const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = 1234567890;
+const symbols = `!@#$%^&*()_+[]{}|;':\",./<>?`;
+

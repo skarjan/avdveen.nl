@@ -14,10 +14,12 @@
 html {
   font-size: 15px;
 }
+
 body {
   background-color: #ffffff;
-  line-height:1.4em;
+  line-height: 1.4em;
 }
+
 a:hover {
   text-decoration: none;
 }
@@ -61,17 +63,20 @@ h6 {
   margin-top: 0;
   line-height: 1.2;
   margin-bottom: .5rem;
-  
+
 }
+
 p {
   margin-top: 0;
   font-size: 1rem;
   margin-bottom: 1rem;
   line-height: 1.1;
 }
+
 small {
   font-size: 12px;
 }
+
 /* Flex classes */
 .flex-items-centered {
   display: flex;
@@ -84,12 +89,15 @@ small {
 .clr-mrn-red {
   color: #990000;
 }
+
 .clr-dark-red {
-  color: #7c0000 
+  color: #7c0000
 }
+
 .sm-text {
-  font-size:12px;
+  font-size: 12px;
 }
+
 /* custom styles */
 /* baseline */
 .content {
@@ -121,6 +129,7 @@ small {
   font-size: 14px;
   font-weight: 600;
 }
+
 .frame-sm-img {
   min-width: 320px;
   max-width: 686px;
@@ -134,6 +143,7 @@ small {
   max-width: 600px;
   padding: 16px 16px;
 }
+
 .personalia-frame {
   min-width: 320px;
   max-width: 600px;
@@ -156,6 +166,7 @@ small {
 .skills {
   font-size: 12px;
 }
+
 .quote-container {
   font-size: 14px;
   float: right;
@@ -239,6 +250,7 @@ small {
 .border {
   user-select: none;
 }
+
 .flex-container {
   padding: 36px 8px;
   margin: 0 auto;
@@ -277,36 +289,41 @@ small {
 .flag-icon {
   top: 12px;
 }
+
 .sm-menu-container {
   font-size: 14px;
 }
 
 /* AppThatPass */
 .password-field {
-  padding:5px;
-  font-size:22px;
+  padding: 5px;
+  font-size: 22px;
   border: 1px solid #ba0001;
 }
+
 /* buttons */
 .bttn {
   min-width: 75px;
   border-radius: 3px;
   font-weight: 600;
   padding: 8px 16px;
-  margin: .1rem;
+  margin: .3rem 0;
 }
+
 .bttn-main {
   background-color: #990000;
-  border:1px solid #990000;
-  color:#ffffff;
-  
+  border: 1px solid #990000;
+  color: #ffffff;
+  transition: background-color .2s ease;
+
 }
+
 .bttn-main:hover {
   background-color: #7c0000;
-  border:1px solid #7c0000;
-  color:#ffffff;
+  border: 1px solid #7c0000;
+  color: #ffffff;
 
-  
+
 }
 
 /* end of baseline */
@@ -354,6 +371,7 @@ small {
     max-width: 100%;
     margin-bottom: 14px;
   }
+
   .personalia-frame,
   .intro-frame,
   .twitter-frame {
@@ -453,15 +471,18 @@ small {
     max-width: 49%;
     margin-bottom: 14px;
   }
+
   .personalia-frame,
   .intro-frame,
   .twitter-frame {
     max-width: 100%;
   }
+
   .flex-between {
     display: flex;
     justify-content: space-between;
   }
+
   .twitter-frame {
     margin-left: auto;
     margin-right: auto;
@@ -539,11 +560,13 @@ small {
   .frame-sm {
     max-width: 334px;
   }
+
   .personalia-frame,
   .intro-frame {
     min-width: 0;
     max-width: 100%;
   }
+
   .intro-holder {
     max-width: 450px;
   }
