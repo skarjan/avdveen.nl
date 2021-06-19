@@ -172,9 +172,9 @@ const cl = cl => {
   return document.getElementsByClassName(cl);
 }
 
-// AppThatPass functionality
+// PassProtect functionality
 const alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const numbers = 1234567890;
+const numbers = "1234567890";
 const symbols = `!@#$%^&*()_+[]{}|;':\",./<>?`;
 
 let pwField = id('jsPassField');
@@ -211,12 +211,17 @@ pwLengthElement.addEventListener("change", () => {
 genButton.addEventListener("click", () => {
   let pwLength = parseInt(pwLengthElement.value)
   
+copyButton.addEventListener("click", ()=>{
+  pwField.select();
+  document.execCommand("copy");
+  trace("Paswword copied");
+})  
   let characters = "";
   if (alphaCheck.checked) {
     characters += alpha;
   }
   if (numberCheck.checked) {
-    characters += symbols;
+    characters += numbers;
   }
   if (symbolCheck.checked) {
     characters += symbols;
