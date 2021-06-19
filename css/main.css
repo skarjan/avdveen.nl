@@ -296,9 +296,14 @@ small {
 
 /* AppThatPass */
 .password-field {
+  width: 375px;
   padding: 5px;
-  font-size: 22px;
+  margin-bottom: .4rem;
+  font-size: 1.1rem;
   border: 1px solid #ba0001;
+}
+.password-length {
+  width:300px;
 }
 
 /* buttons */
