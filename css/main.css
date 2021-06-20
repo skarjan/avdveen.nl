@@ -91,7 +91,10 @@ small {
   align-content: flex-start;
   justify-content: center;
 }
-
+.flex-center-y {
+  display:flex;
+  align-items: center;
+}
 /* utility classes */
 .clr-mrn-red {
   color: #990000;
@@ -330,7 +333,7 @@ small {
 input[type=range] {
   height: 21px;
   -webkit-appearance: none;
-  margin: 10px 0;
+  margin: 10px .2rem;
 }
 input[type=range]:focus {
   outline: none;
