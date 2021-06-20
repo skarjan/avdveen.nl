@@ -151,7 +151,10 @@ small {
   max-width: 600px;
   padding: 16px 16px;
 }
-
+.developer-img {
+  width: 85%;
+  margin: 0 auto;
+}
 .personalia-frame {
   min-width: 320px;
   max-width: 600px;
